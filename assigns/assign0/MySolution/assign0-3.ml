@@ -4,11 +4,10 @@
 let string_length = String.length
 let string_init = String.init
 let chr = Char.chr
-
 ;;
 
 let int2str(i0: int): string =
-  string_init( intLength(0) ) ( intAtPoint(0) )
+  string_init( intLength(x) ) ( intAtPoint(i) )
 ;;
 
 let rec
@@ -26,10 +25,26 @@ divByTen(y: int): int
   if i < y then i0 else ((i0 = i0 / 10)) divByTen(y+1)
 ;;
 
+
 in int2str(124)
 
 
 (*
+This code doesn't pass the autograder, but I think the logic is sound.
+It takes uses string_init with seperate functions to get the length of the int and the int at the current point
+intLength: simply uses repeatedly dividing by 10 to find the number of digits in the int
+intAtPoint: uses dividing by a power of 10 (there is a seperate function for this) and mod to find the current int 
+*)
+
+
+
+
+
+
+
+
+(*
+PROGRAMMING NOTES:
 124/10 (+1)
 12/10 (+1)
 2/10 (+1)
