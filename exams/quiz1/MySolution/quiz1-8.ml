@@ -18,6 +18,22 @@
 
 let sort5: int*int*int*int*int -> int*int*int*int*int =
   (* YOUR CODE *)
+  compare(index(0)) (index(1))
+  compare(index(0)) (index (2))
+  compare(index(0)) (index (3))
+  compare(index(0)) (index (4))
+  compare(index(1)) (index (2))
+  compare(index(1)) (index (3))
+  compare(index(1)) (index (4))
+  compare(index(2)) (index (3))
+  compare(index(2)) (index (4))
+  compare(index(3)) (index (4))
 
+  let compare(x:int)(y:int): int =
+  if x>y then temp=index(y); index(y)=index(x); index(x)=temp
+  else x y
 
+  let index(i:int): int =
+  sort5[i]
+;;
 (* ************************************************ *)
