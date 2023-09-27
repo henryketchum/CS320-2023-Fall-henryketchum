@@ -5,8 +5,10 @@ let rec
 mylist_length(xs: 'a mylist): int =
   match xs with
   | MyNil -> 0
-  (**| MyCons(x1,xs) -> 1 + mylist_length(MyNil)*)
   | MyCons (_, xs) -> 1 + mylist_length xs
+  | MySnoc (xs, _) -> 1 + mylist_length xs
+  | MyReverse (xs) -> 1 + mylist_length xs
+  | MyAppend2 (_, _) -> 1 + mylist_length xs
 ;;
 
 let mylist_length =
